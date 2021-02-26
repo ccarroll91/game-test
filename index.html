@@ -18,6 +18,7 @@
 
 
 </style>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 <body>
 
@@ -35,7 +36,7 @@
         <li data-target="#myCarousel" data-slide-to="9"></li>
         <li data-target="#myCarousel" data-slide-to="10"></li>
     </ol>
-    <div class="carousel-inner">
+    <div class="carousel-inner" id="carousel">
         <div class="item active">
             <img src="assets/image.jpg" style="width:100%">
         </div>
@@ -76,16 +77,31 @@ window.onload = function() {
 	imgs[currentPic].style.animation = 'fadey '+interval+'ms';
 }, interval);
 }
+function getFullscreenElement() {
+    return document.fullscreenElement
+        || document.webkitFullscreenElement
+        || document.mozFullscreenElement
+        || document.msFullscreenElement;        
+}
 
-function fullScreen(element) {
-	if (element.requestFullscreen) {
-		element.requestFullscreen();
-		} else if (element.webkitRequestFullscreen ) {
-			element.webkitRequestFullscreen();
-		} else if (element.mozRequestFullScreen) {
-			element.mozRequestFullScreen();
-		}
-	}
+function toggleFullscreen() {
+    if (getFullscreenElement()) {
+        document.exitFullscreen();
+    } else {
+        document.getElementById("carousel").requestFullscreen().catch(console.log);
+    }
+}
+
+    document.addEventListener("dblclick", () => {
+            toggleFullscreen();
+        }); 
+    
+        document.addEventListener("fullscreenchange", () => {
+            console.log("full screen changed!");
+        })
+
+    
+   
 </script>
 
 </body>
