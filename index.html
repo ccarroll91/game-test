@@ -59,6 +59,21 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
+<audio id="myAudio" controls>
+  <source src="rebecca johnson.ogg" type="audio/ogg">
+  <source src="rebecca johnson.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio><br>
+
+<button onclick="enableControls()" type="button">Enable controls</button>
+<button onclick="disableControls()" type="button">Disable controls</button>
+<button onclick="checkControls()" type="button">Check controls status</button>
+
+
+
+
+
 <script>
 window.onload = function() {
 	var imgs = document.getElementById('myCarousel').children;
@@ -100,6 +115,21 @@ function toggleFullscreen() {
             console.log("full screen changed!");
         })
 
+
+var x = document.getElementById("myAudio");
+function enableControls() { 
+  x.controls = true;
+  x.load();
+} 
+
+function disableControls() { 
+  x.controls = false;
+  x.load();
+} 
+ 
+function checkControls() { 
+  alert(x.controls);
+}         
     
    
 </script>
