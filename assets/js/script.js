@@ -61,3 +61,45 @@ function openFullscreen() {
   }
 }
 
+/*---------------------------------------------------Slide Functions*/
+
+var images = ["titleplaceholder.png", "1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png", "10.png", "11.png", "12.png",
+ "13.png", "14.png", "15.png", "16.png", "17.png", "18.png", "19.png", "20.png", "21.png", "22.png", "23.png", "24.png", "25.png", "creditsplaceholder.png"]
+
+var audio = ["audio2.mp3", "audio3.mp3", "audio4.mp3", "audio5.mp3", "audio6.mp3", "audio7.mp3", "audio8.mp3", "audio910.mp3", "audio11.mp3", 
+"audio12.mp3", "audio13.mp3", "audio14.mp3", "audio15.mp3", "audio16.mp3", "audio17.mp3", "audio18.mp3", "audio19.mp3", "audio20.mp3", "audio21.mp3", 
+"audio22.mp3", "audio23.mp3", "audio24.mp3", "audio25.mp3", "audio26.mp3", "audio27.mp3", "audio28.mp3", ]
+
+var i = 0;
+
+function nextItem() {
+    i = i + 1; 
+    i = i % images.audio.length; 
+    return images.audio[i];
+}
+
+function prevItem() {
+    if (i === 0) {
+        i = images.audio.length;
+    }
+    i = i - 1;  
+    return images.audio[i];
+}
+
+
+window.addEventListener('load', function () {
+    document.getElementById('images').textContent = arr[0];
+    document.getElementById('prev_button').addEventListener(
+        'click', 
+        function (e) { 
+            document.getElementById('images').textContent = prevItem();
+        }
+    );
+    
+    document.getElementById('next_button').addEventListener(
+        'click',
+        function (e) { 
+            document.getElementById('images').textContent = nextItem();
+        }
+    );
+});
