@@ -74,16 +74,16 @@ var i = 0;
 
 function nextItem() {
     i = i + 1; 
-    i = i % images.audio.length; 
-    return images.audio[i];
+    i = i % images.length; 
+    return images[i];
 }
 
 function prevItem() {
     if (i === 0) {
-        i = images.audio.length;
+        i = images.length;
     }
     i = i - 1;  
-    return images.audio[i];
+    return images[i];
 }
 
 
@@ -91,14 +91,14 @@ window.addEventListener('load', function () {
     document.getElementById('images').textContent = arr[0];
     document.getElementById('prev_button').addEventListener(
         'click', 
-        function (e) { 
+        function () { 
             document.getElementById('images').textContent = prevItem();
         }
     );
     
     document.getElementById('next_button').addEventListener(
         'click',
-        function (e) { 
+        function () { 
             document.getElementById('images').textContent = nextItem();
         }
     );
