@@ -50,18 +50,31 @@ function toggle(event) {
 
 /*--------------------------------------------------Fullscreen--*/
 
-document.addEventListener("keypress", function(e) {
-  if (e.keyCode === 13) {
-    toggleFullScreen();
-  }
-}, false);
-
-function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
+var elem = document.getElementById("myCarousel");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { 
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { 
+    elem.msRequestFullscreen();
   }
 }
+
+/*-------------------------------------autoplay on entry---*/
+
+$(window).scroll(function() {
+
+    var audio = $('.audio, .item');
+
+    $(audio).each(function(){
+
+        if(audio.is(':in-viewport')){
+
+            audio[0].play();
+
+            video.removeClass('audio');
+            //I removed class to stop repeating the action ".play()" when it is scrolled again.
+        }
+    });
+});
