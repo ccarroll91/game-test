@@ -64,12 +64,12 @@ function openFullscreen() {
 /*-------------------------------------autoplay on entry---*/
 
 $(window).scroll(function() {
-
-    var audio = $('.audio, .item');
+    var image = $('.item');
+    var audio = $('.audio');
 
     $(audio).each(function(){
 
-        if(audio.is(':in-viewport')){
+        if(image.is(':in-viewport')){
 
             audio[0].play();
 
