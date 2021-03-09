@@ -61,20 +61,3 @@ function openFullscreen() {
   }
 }
 
-/*-------------------------------------autoplay on entry---*/
-
-$(window).scroll(function() {
-    var image = $('.item');
-    var audio = $('.audio');
-
-    $(audio).each(function(){
-
-        if(image.is(':in-viewport')){
-
-            audio[0].play();
-
-            video.removeClass('audio');
-            //I removed class to stop repeating the action ".play()" when it is scrolled again.
-        }
-    });
-});
