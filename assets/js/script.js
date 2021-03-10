@@ -63,43 +63,66 @@ function openFullscreen() {
 
 /*---------------------------------------------------Slide Functions*/
 
-var images = ["titleplaceholder.png", "1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png", "10.png", "11.png", "12.png",
- "13.png", "14.png", "15.png", "16.png", "17.png", "18.png", "19.png", "20.png", "21.png", "22.png", "23.png", "24.png", "25.png", "creditsplaceholder.png"]
+var audio1 = $('#audio-1');
+var audio2 = $('#audio-2');
+var audio3 = $('#audio-3');
+var audio4 = $('#audio-4');
+var audio5 = $('#audio-5');
+var audio6 = $('#audio-6');
+var audio7 = $('#audio-7');
+var audio8 = $('#audio-8');
+var audio9 = $('#audio-9');
+var audio10 = $('#audio-10');
+var audio11 = $('#audio-11');
+var audio12 = $('#audio-12');
+var audio13 = $('#audio-13');
+var audio14 = $('#audio-14');
+var audio15 = $('#audio-15');
+var audio16 = $('#audio-16');
+var audio17 = $('#audio-17');
+var audio18 = $('#audio-18');
+var audio19 = $('#audio-19');
+var audio20 = $('#audio-20');
+var audio21 = $('#audio-21');
+var audio22 = $('#audio-22');
+var audio23 = $('#audio-23');
+var audio24 = $('#audio-24');
+var audio25 = $('#audio-25');
+var audio26 = $('#audio-26');
 
-var audio = ["audio2.mp3", "audio3.mp3", "audio4.mp3", "audio5.mp3", "audio6.mp3", "audio7.mp3", "audio8.mp3", "audio910.mp3", "audio11.mp3", 
-"audio12.mp3", "audio13.mp3", "audio14.mp3", "audio15.mp3", "audio16.mp3", "audio17.mp3", "audio18.mp3", "audio19.mp3", "audio20.mp3", "audio21.mp3", 
-"audio22.mp3", "audio23.mp3", "audio24.mp3", "audio25.mp3", "audio26.mp3", "audio27.mp3", "audio28.mp3", ]
-
-var i = 0;
-
-function nextItem() {
-    i = i + 1; 
-    i = i % images.length; 
-    return images[i];
-}
-
-function prevItem() {
-    if (i === 0) {
-        i = images.length;
-    }
-    i = i - 1;  
-    return images[i];
-}
+varaudioArray =[audio1, audio2, audio3, audio4, audio5, audio6, audio7, audio8, audio9, audio10, audio11, audio12, audio13, audio14, audio15, audio16, audio17, audio18, audio19, audio20, audio21, audio22, audio23, audio24, audio25, audio26]
+var i=0
+var lastPlayedFile = null;
+$(".click").click(function(){
+  if(lastPlayedFile !== null) {
+     lastPlayedFile[0].currentTime = 0;
+     lastPlayedFile.trigger('pause'); 
+  }
+  if (i< audioArray.length){
+     lastPlayedFile = audioArray[i];
+     audioArray[i].trigger('play');
+     i++;
+  } else if (i>=audioArray.length){
+     i = 0;
+     lastPlayedFile = audioArray[0];
+     audioArray[i].trigger('play');
+  };
+});
 
 
 window.addEventListener('load', function () {
-    document.getElementById('images').textContent = arr[0];
+    document.getElementById('audio').textContent = arr[0];
     document.getElementById('prev_button').addEventListener(
         'click', 
         function () { 
-            document.getElementById('images').textContent = prevItem();
+            document.getElementById('audio').textContent = prevItem();
         }
     );
     
     document.getElementById('next_button').addEventListener(
         'click',
         function () { 
-            document.getElementById('images').textContent = nextItem();
+            document.getElementById('audio').textContent = nextItem();
         }
     );
 });
