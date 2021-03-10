@@ -109,20 +109,3 @@ $(".click").click(function(){
   };
 });
 
-
-window.addEventListener('load', function () {
-    document.getElementById('audio').textContent = arr[0];
-    document.getElementById('prev_button').addEventListener(
-        'click', 
-        function () { 
-            document.getElementById('audio').textContent = prevItem();
-        }
-    );
-    
-    document.getElementById('next_button').addEventListener(
-        'click',
-        function () { 
-            document.getElementById('audio').textContent = nextItem();
-        }
-    );
-});
