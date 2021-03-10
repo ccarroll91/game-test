@@ -93,10 +93,7 @@ setTimeout(function(){
 
 
 
-const narBtn = document.querySelectorAll(".play-nar");
-let myAudio1 = document.querySelector('#audio1');
-narBtn.addEventListener('click',()=>{
-    myAudio1.play();
-});
-
+function playAudio(url) {
+  new Audio(url).play();
+};
 
