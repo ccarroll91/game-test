@@ -53,47 +53,10 @@ function openFullscreen() {
 
 
 /*---------------------------------------------------audio*/
-
-setTimeout(function(){
-    document.getElementById("audio2").play();
-    console.log("play audio file");
-})
-setTimeout(function(){
-    document.getElementById("audio3").play();
-    console.log("play audio file");
-})
-setTimeout(function(){
-    document.getElementById("audio4").play();
-    console.log("play audio file");
-})
-setTimeout(function(){
-    document.getElementById("audio5").play();
-    console.log("play audio file");
-})
-setTimeout(function(){
-    document.getElementById("audio6").play();
-    console.log("play audio file");
-})
-setTimeout(function(){
-    document.getElementById("audio7").play();
-    console.log("play audio file");
-})
-setTimeout(function(){
-    document.getElementById("audio2").play();
-    console.log("play audio file");
-})
-setTimeout(function(){
-    document.getElementById("audio8").play();
-    console.log("play audio file");
-})
-setTimeout(function(){
-    document.getElementById("audio9").play();
-    console.log("play audio file");
-})
-
-
+/*---- A simple audio function that allows the user to click on the chosen image and play an audio file--*/
+/*---- Format for inserting audio into HTML element is - onclick="playAudio('#.mp3')"---*/
 
 function playAudio(url) {
-  new Audio(url).play();
+  new Audio(url).play().volume=.5;
 };
 
