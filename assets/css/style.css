@@ -19,6 +19,15 @@
     color: #d4d7da;
 }
 
+.body-title {
+    font-family: 'Mountains of Christmas', sans-serif;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 36px;
+    color: #304255;
+}
+
 .subtitle {
     font-family: 'Mountains of Christmas', sans-serif;
     text-align: center;
@@ -70,6 +79,7 @@
     top: 0;
     bottom: auto;
     border-radius: 25px;
+    font-size: 40px;
 }
 
 .item img{
@@ -148,4 +158,38 @@
 
 .footer-element a {
     font-size: 20px;
+}
+
+/*----------------------------------------------------------------Quiz---*/
+
+.quiz {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #304255;
+    max-width: 75%;
+    position: relative;
+    padding: 20px;
+    height: 100%;
+}
+
+.quiz-question {
+    text-align: center;
+    font-family: 'Mountains of Christmas', sans-serif;
+    font-weight: 300;
+    color: #304255;
+    font-size: 30px;
+}
+
+.btn-answer {
+    border-radius: 50%;
+    background-color: #304255;
+    color: #d4d7da;
+}
+
+#quiz #score {
+    font-family: 'Mountains of Christmas', sans-serif;
+    font-size: 24px;
+    color: #d4d7da;
+    background-color: #304255;
 }
