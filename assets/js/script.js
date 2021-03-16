@@ -1,7 +1,3 @@
-
-
-/*---------------------------------------------------------------------dropdown*/
-
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -18,20 +14,6 @@ window.onclick = function(event) {
     }
   }
 }
-
-
-
-
-/*---------------------------------------------------------------------about----*/
-
-
-
-/*--------------------------------------------------Fullscreen--*/
-
-
-/*---------------------------------------------------audio*/
-/*---- A simple audio function that allows the user to click on the chosen image and play an audio file--*/
-/*---- Format for inserting audio into HTML element is - onclick="playAudio('#.mp3')"---*/
 
 $(document).ready(function(){
  
@@ -82,15 +64,6 @@ function openFullscreen() {
     elem.msRequestFullscreen();
   }
 }
-
-
-
-/*----------------------------------------------email-------*/
-
-
-
-
-/*---------------------------------------------------------------------about----*/
 
 document.querySelector('#about-button').addEventListener('click', toggle)
 
