@@ -75,7 +75,7 @@
 
 .bg-color {
     background-color: #f0f8ff;
-    height: 100%;
+    height: calc(100vh - 30px);
 }
 
 .intro {
