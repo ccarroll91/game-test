@@ -275,6 +275,10 @@ form textarea {
   text-decoration: none;
 }
 
+
+/*--------------------------------------------------------------------fullscreen and media queries--*/
+
+
 @media screen and (max-width: 992px) {
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
         display: block;
@@ -303,4 +307,9 @@ form textarea {
     width: 300px;
     position: relative;
 }
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img, .item img :fullscreen{
+    height: 100vh;
+    width: auto;
 }
