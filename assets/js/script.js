@@ -34,11 +34,14 @@ $(document).ready(function(){
 
 setInterval(() => {
      $("#myCarousel").carousel("next");
-    function playAudio(url) {
-  new Audio(url).play().volume=.5;
-};
-  }, 3000);
+    function playClip(){
+    if($('.item').eq(1).hasClass('active')){
+         $(this).next().get(0).play();
+    }
+}
+  }, 3200);
 
+  window.setInterval(playClip,3200);
 
 $('#myCarousel').on('slid.bs.carousel', checkitem);
 
