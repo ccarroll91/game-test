@@ -31,10 +31,16 @@ $(document).ready(function(){
   });
 });
 
-console.log("myCarousel")
 
-$('#myCarousel').on('slid', '');
-$('#myCarousel').on('slid.bs.carousel', '');
+setInterval(() => {
+     $("#myCarousel").carousel("next");
+    function playAudio(url) {
+  new Audio(url).play().volume=.5;
+};
+  }, 3000);
+
+
+$('#myCarousel').on('slid.bs.carousel', checkitem);
 
 $(document).ready(function(){
     checkitem();
@@ -43,15 +49,15 @@ $(document).ready(function(){
 function checkitem()
 {
 var $this = $('#myCarousel');
-    if($('.carousel-inner .item:first').hasClass('active')) {
+    if ($('.carousel-inner .item:first').hasClass('active')) {
         $this.children('.left.carousel-control').hide();
         $this.children('.right.carousel-control').show();
-    } else if($('.carousel-inner .item:last').hasClass('active')) {
-        $this.children('.left.carousel-control').show();
+    } else if ($('.carousel-inner .item:last').hasClass('active')) {
         $this.children('.right.carousel-control').hide();
+        $this.children('.left.carousel-control').show();
     } else {
         $this.children('.carousel-control').show();
-    } 
+    }
 }
 
 var elem = document.getElementById("myCarousel");
