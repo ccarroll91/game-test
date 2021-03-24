@@ -1,5 +1,5 @@
 function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("myDropdown").classList.toggle("secret");
 }
 
 window.onclick = function(event) {
@@ -8,8 +8,8 @@ window.onclick = function(event) {
     var i;
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+      if (openDropdown.classList.contains('secret')) {
+        openDropdown.classList.remove('secret');
       }
     }
   }
@@ -48,12 +48,12 @@ function checkitem()
 var $this = $('#myCarousel');
     if ($('.carousel-inner .item:first').hasClass('active')) {
         $this.children('.left.carousel-control').hide();
-        $this.children('.right.carousel-control').show();
+        $this.children('.right.carousel-control').secret();
     } else if ($('.carousel-inner .item:last').hasClass('active')) {
         $this.children('.right.carousel-control').hide();
-        $this.children('.left.carousel-control').show();
+        $this.children('.left.carousel-control').secret();
     } else {
-        $this.children('.carousel-control').show();
+        $this.children('.carousel-control').secret();
     }
 }
 
@@ -82,10 +82,10 @@ function toggle(event) {
 }
 
 
-let show = document.querySelector(".secret");
-show.ontransitionrun = function() {
-  show.textContent = "Christmas at Gran's was written by Michael Brennan at the age of 10, and adapted into this digital story by Conor Carroll. It is with deep regret that Conor discovered that Bonzo did not, in fact, exist and was a figment of Brennan's imagination for the poem. As Michael's brother Tom put it, 'he took a bit of creative licence there'. We hope that you still love him.";
+let secret = document.querySelector(".secret");
+secret.ontransitionrun = function(event) {
+  secret.textContent = "Christmas at Gran's was written by Michael Brennan at the age of 10, and adapted into this digital story by Conor Carroll. It is with deep regret that Conor discovered that Bonzo did not, in fact, exist and was a figment of Brennan's imagination for the poem. As Michael's brother Tom put it, 'he took a bit of creative licence there'. We hope that you still love him.";
 }
-show.ontransitionend = function() {
-  show.textContent = "Want to know a secret?";
+secret.ontransitionend = function(event) {
+  secret.textContent = "Want to know a secret?";
 }
