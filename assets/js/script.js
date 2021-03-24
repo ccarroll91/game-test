@@ -31,17 +31,11 @@ $(document).ready(function(){
   });
 });
 
-
 setInterval(() => {
      $("#myCarousel").carousel("next");
-    function playClip(){
-    if($('.item').eq(1).hasClass('active')){
-         $(this).next().get(0).play();
-    }
-}
-  }, 3200);
+    // Write code to play audio
+  }, 3000);
 
-  window.setInterval(playClip,3200);
 
 $('#myCarousel').on('slid.bs.carousel', checkitem);
 
@@ -85,4 +79,13 @@ function toggle(event) {
     event.target.innerText = 'About'
     document.getElementById('about').style.display = 'none'
   }
+}
+
+
+let show = document.querySelector(".secret");
+show.ontransitionrun = function() {
+  show.textContent = "Christmas at Gran's was written by Michael Brennan at the age of 10, and adapted into this digital story by Conor Carroll. It is with deep regret that Conor discovered that Bonzo did not, in fact, exist and was a figment of Brennan's imagination for the poem. As Michael's brother Tom put it, 'he took a bit of creative licence there'. We hope that you still love him.";
+}
+show.ontransitionend = function() {
+  show.textContent = "Want to know a secret?";
 }
