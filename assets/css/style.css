@@ -28,6 +28,14 @@
     color: #d4d7da;
 }
 
+.img-head {
+    height: 90px;
+    width: auto;
+    left: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 /*---------------------------------------------------------------contents/dropdown--*/
 
 .dropbtn {
@@ -241,6 +249,26 @@ form textarea {
     bottom: 0;
     left: 0;
     width: 100%;
+    line-height: 7px;
+}
+
+.my-footer p {
+    font-family: "Mountains of Christmas", sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.list-inline-item i{
+    font-size: 20px;
+    text-decoration: none;
+    color: #304255;
+}
+
+.list-inline-item i:hover{
+    font-size: 20px;
+    text-decoration: none;
+    color: #f0f8ff;
 }
 
 .column {
@@ -256,23 +284,39 @@ form textarea {
     line-height: 17px;
 }
 
-#about-div {
+#secret-btn {
   background-color: #304255;
   font-family: 'Mountains of Christmas', sans-serif;;
   color: white;
   padding: 16px;
-  font-size: 26px;
+  font-size: 16px;
   border: hidden;
-  width: 100%;
-  
+  width: 150px;
+  text-align: center;
+  border-radius: 15%;
+  margin-bottom: 10px;
 }
 
-#about-div h5 {
+#secret-btn h5 {
     font-family: 'Mountains of Christmas', sans-serif;;
   color: white;
   padding: 16px;
   font-size: 26px;
   text-decoration: none;
+}
+
+#secret {
+    background-color: #253241;
+    color: #d4d7da;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    border: hidden;
+    border-radius: 15%;
+}
+
+#secret p {
+    padding: 15px;
+    text-align: justify;
 }
 
 
@@ -315,25 +359,3 @@ form textarea {
 }
 
 
-.secret {
-  margin-left: 70px;
-  margin-top: 30px;
-  border-style: solid;
-  border-width: 1px;
-  display: block;
-  width: 100px;
-  height: 100px;
-  background-color: #304255;
-  color: #f0f8ff;
-  padding: 20px;
-  font: bold "Inter", sans-serif;
-  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
-}
-
-.secret:hover {
-  background-color: #FFCCCC;
-  color: #000000;
-  width: 200px;
-  height: 200px;
-  transform: rotate(180deg);
-}

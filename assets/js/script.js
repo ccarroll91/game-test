@@ -33,6 +33,9 @@ $(document).ready(function(){
 
 setInterval(() => {
      $("#myCarousel").carousel("next");
+     
+
+
     // Write code to play audio
   }, 3000);
 
@@ -68,24 +71,36 @@ function openFullscreen() {
   }
 }
 
-document.querySelector('#about-button').addEventListener('click', toggle)
+document.querySelector('#secret-btn').addEventListener('click', toggle)
 
 function toggle(event) {
-    if (document.getElementById('about').style.display == 'none') {
+    if (document.getElementById('secret').style.display == 'none') {
     event.target.innerText = 
-    `About`
-    document.getElementById('about').style.display = ''
+    `Want to know a secret?`
+    document.getElementById('secret').style.display = ''
   } else {
-    event.target.innerText = 'About'
-    document.getElementById('about').style.display = 'none'
+    event.target.innerText = 'Want to know a secret?'
+    document.getElementById('secret').style.display = 'none'
   }
 }
 
 
-let secret = document.querySelector(".secret");
-secret.ontransitionrun = function(event) {
-  secret.textContent = "Christmas at Gran's was written by Michael Brennan at the age of 10, and adapted into this digital story by Conor Carroll. It is with deep regret that Conor discovered that Bonzo did not, in fact, exist and was a figment of Brennan's imagination for the poem. As Michael's brother Tom put it, 'he took a bit of creative licence there'. We hope that you still love him.";
-}
-secret.ontransitionend = function(event) {
-  secret.textContent = "Want to know a secret?";
-}
+/*
+    Stop / Start carousel autoplay
+*/
+$('.btn-customized').on('click', function(){
+ 
+    if( ! $(this).hasClass('paused') ) {
+        $('.carousel').mycarousel('pause');
+        $('.btn-customized').toggleClass('paused');
+        $('.btn-customized i').removeClass('fa-pause').addClass('fa-play');
+        $(this).blur();
+    }
+    else {
+        $('.carousel').carousel('cycle');
+        $('.btn-customized').toggleClass('paused');
+        $('.btn-customized i').removeClass('fa-play').addClass('fa-pause');
+        $(this).blur();
+    }
+ 
+});
