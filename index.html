@@ -29,13 +29,6 @@
         </div>
     </header>
     <section class="container-fluid bg-color" style="min-height: calc(100vh-120px);">
-                <img id="slideshow" src="assets/images/titleplaceholder.png"/>
-                <button class="left" href="#slideshow"><span class="sr-only">Previous</span></button>
-                <button class="right" href="#slideshow"><span class="sr-only">Next</span></button>
-
-                <input id="play" type="button" value="Play" onclick="mode('play');startSlideshow();" />
-<input id="pause" type="button" value="Pause" disabled="disabled" onclick="mode('pause');startSlideshow();" />
-<input id="stop" type="button" value="Stop" disabled="disabled" onclick="mode('stop');startSlideshow();" />
 
 
 
@@ -45,7 +38,7 @@
 
 
 
-        <!--<div class="intro">
+        <div class="intro">
             <p><strong>Welcome</strong> to the mind of Michael Brennan. On this page you'll find a poem written
             by Michael entitled <span class="title-body">Christmas at Gran's</span>.</p>
             <p>When reading through the story, click on the slide to hear the narration. Don't worry about play/pause controls, 
@@ -63,6 +56,7 @@
                         </div>
                         <div class="item" id="image2">
                             <img src="assets/images/1.png" alt="A station wagon driving through the snow" onclick="playAudio('assets/audio/audio2.mp3')">
+                            <audio src="assets/audio/audio2.mp3" autoplay></audio>
                             <span class="sr-only">We're going to Gran's for Christmas</span>
                         </div>
                         <div class="item" id="image3">
@@ -254,11 +248,10 @@
                                     <span class="sr-only">Next</span>
                                 </a>
                     </div>
-                </div>
-                <div class="pause-cycle-button">
-            <button type="button" class="btn btn-primary btn-customized">
-                <i class="fas fa-pause"></i>
-            </button>
+                    <input id="play" type="button" value="Play" onclick="mode('play');startSlideshow();" />
+<input id="pause" type="button" value="Pause" disabled="disabled" onclick="mode('pause');startSlideshow();" />
+<input id="stop" type="button" value="Stop" disabled="disabled" onclick="mode('stop');startSlideshow();" />
+                
         </div>
                 <!---<div class="button-center">
                     <button class="fullscreenbtn" onclick="openFullscreen();"><i class="fas fa-expand-arrows-alt fsicon" alt="Go full screen"></i><span class="sr-only">Click to go full screen</span></button>
