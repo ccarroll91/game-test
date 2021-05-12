@@ -84,8 +84,7 @@ function toggle(event) {
 
 event.target.innerText = 'About'
     document.getElementById('about').style.display = 'none'
-  }
-}
+ 
 
 
 let show = document.querySelector(".secret");
