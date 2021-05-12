@@ -13,3 +13,8 @@ function sendMail(contactForm) {
         });
         return false;
 }
+
+document.addEventListener("submit", function(event) {
+  event.preventDefault()
+  event.target.reset()
+})
