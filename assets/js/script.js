@@ -68,7 +68,7 @@ function openFullscreen() {
 
 /*----------------------------------------------------------------about--*/
 
-document.querySelector('#secret-btn').addEventListener('click', toggle);
+document.querySelector('#secret-btn');
 
 function toggle(event) {
     if (document.getElementById('secret').style.display == 'none') {
