@@ -12,9 +12,13 @@ function sendMail(contactForm) {
             console.log("FAILED", error);
         });
         return false;
+        function myFunction() {
+        alert("Thanks for getting in touch <3");
+        }
 }
 
 document.addEventListener("submit", function(event) {
   event.preventDefault()
   event.target.reset()
 })
+
