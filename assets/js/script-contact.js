@@ -11,6 +11,7 @@ function sendMail(contactForm) {
         },
         function(error) {
             console.log("FAILED", error);
+            alert("Uh-oh! Something has gone wrong!");
         });
         return false;
 }
