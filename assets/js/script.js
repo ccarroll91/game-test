@@ -88,9 +88,3 @@ show.ontransitionrun = function() {
 show.ontransitionend = function() {
   show.textContent = "Want to know a secret?";
 
-/*---------------------------------------------------audio*/
-/*---- A simple audio function that allows the user to click on the chosen image and play an audio file--*/
-/*---- Format for inserting audio into HTML element is - onclick="playAudio('#.mp3')"---*/
-function playAudio(url) {
-  new Audio(url).play().volume='.5';
-}
