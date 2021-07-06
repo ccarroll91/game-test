@@ -87,4 +87,4 @@ show.ontransitionrun = function() {
 }
 show.ontransitionend = function() {
   show.textContent = "Want to know a secret?";
-
+}
