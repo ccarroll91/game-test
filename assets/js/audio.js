@@ -1,4 +1,4 @@
-/*---------------------------------------------------audio*/
+/*---------------------------------------------------audio
 
 document.getElementById('play1').addEventListener('click', function (e) {
     e.preventDefault();
@@ -134,12 +134,25 @@ document.getElementById('play1').addEventListener('click', function (e) {
     e.preventDefault();
     document.getElementById('audio27').play();
   });
-  
+  --*/
   /*--------------------------------------------------audio stop--*/
 
-  document.addEventListener('play', function(e){
-    var audios = document.getElementsByTagName('audio');
-    for(var i = 0, len = audios.length; i < len;i++){
-        if(audios[i] != e.target){
-            audios[i].pause();
-        }} 
+  function play(e) {
+    var audio = document.getElementById('audio'+e);
+
+    var sounds = document.getElementsByTagName('audio');
+    var shouldPlay = true;
+    for(i=0; i<sounds.length; i++) {
+        if(sounds[i].currentTime > 0 && !sounds[i].paused && !sounds[i].ended) {
+            sounds[i].pause();
+            sounds[i].currentTime = 0;
+
+            if(audio == sounds[i]) shouldPlay = false;
+        }
+    }
+
+
+    if(shouldPlay) {
+        audio.play();
+    }
+}
